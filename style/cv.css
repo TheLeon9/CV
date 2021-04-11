@@ -12,6 +12,7 @@ html {
 
 body {
     background-color: azure;
+    overflow: hidden;
 }
 
 /* 
@@ -25,13 +26,13 @@ body {
     top: 8%;
     right: 20%;
 }
+
 .logob {
     opacity: 0;
     position: absolute;
     height: 330px;
     top: 8%;
     right: 20%;
-    cursor: zoom-in;
 }
 
 section {
@@ -70,7 +71,8 @@ section {
 .M-Title {
     font-size: 60px;
 }
-.M-Text{
+
+.M-Text {
     position: absolute;
     top: 16%;
     right: 6%;
@@ -79,6 +81,11 @@ section {
 }
 
 .M-Pres {
+    opacity: 0.8;
+    font-size: 18px;
+}
+
+.M-Presp {
     opacity: 0.6;
     font-size: 18px;
 }
@@ -96,7 +103,8 @@ section {
     border-bottom: 1px solid black;
     color: #0086c8;
 }
-.Link ul li a:hover{
+
+.Link ul li a:hover {
     font-size: 26px;
     cursor: pointer;
     border-bottom: 1px solid rgb(0, 255, 255);
@@ -119,75 +127,299 @@ section {
 
 /* 
 +----------------------------------------------------------------------+
-| Animation pour la souris qui bouge
+| Contact
 +----------------------------------------------------------------------+
 */
+.resume .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #9b59b6;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+    padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+    padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #9b59b6;
+    border: 2px solid #9b59b6;
+}
 /* 
 +----------------------------------------------------------------------+
 | Scroll Bar
 +----------------------------------------------------------------------+
 */
-::-webkit-scrollbar {									
-	width: 8px;
-	background-color: black;
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: black;
 }
-::-webkit-scrollbar-thumb {								
+
+::-webkit-scrollbar-thumb {
     background-color: #193273;
 }
-::-webkit-scrollbar-thumb:hover {						
-	background-color: cyan;
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: cyan;
 }
-::-webkit-scrollbar-button {							
-	height: 8px;
-	background-color: #0086c8;
+
+::-webkit-scrollbar-button {
+    height: 8px;
+    background-color: #0086c8;
 }
+
 /* 
 +----------------------------------------------------------------------+
 | Animation pour les aides de pages
 +----------------------------------------------------------------------+
 */
-.M-TitleHelp{
+.M-TitleHelp {
     writing-mode: vertical-rl;
     position: absolute;
-    top:100%;
-    left: 0%;
+    top: 100%;
+    right: 0%;
     font-size: 28px;
     color: #0086c8;
-    text-decoration: overline;
-    animation: 2s cubic-bezier(0.34, 1.30, 0.64, 1) wow;
+    text-decoration: underline;
+    animation: 2s cubic-bezier(0.70, 1.30, 0.90, 1) wow;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     transition: all;
     transition-delay: 0.1s;
-    transition-duration: 0.8s;
-    
+    transition-duration: 0.4s;
+
 }
-.M-TitleHelp:hover{
-    
-    transform:rotate(-90deg);
-    text-decoration: overline;
-    cursor:none;
+
+.M-TitleHelp:hover {
+    transform: rotate(-90deg);
+    text-decoration: underline;
+    cursor: none;
     color: cyan;
 }
+
 @keyframes wow {
-    0%{
-        top:100%;
+    0% {
+        top: 100%;
 
     }
-    75%{
-        top: 80%;
+
+    75% {
+        top: 85%;
     }
-    100%{
-        top: 4%;
-    
+
+    100% {
+        top: 40%;
+
     }
 }
+
+/* 
++----------------------------------------------------------------------+
+| Contact
++----------------------------------------------------------------------+
+*/
+.C-icone1 {
+    width: 40px;
+}
+
+.C-icone2 {
+    width: 40px;
+}
+
+.C-icone3 {
+    width: 40px;
+
+}
+
+.C-icone4 {
+    width: 40px;
+}
+
+.C-icone5 {
+    width: 40px;
+
+}
+
+.M-TextC {
+    position: absolute;
+    top: 8%;
+    right: 6%;
+    width: 440px;
+    height: 490px;
+}
+
+.logom {
+    height: 200px;
+    box-shadow: 6px 6px 6px black;
+    border-radius: 30px / 30px;
+}
+
+.ok {
+    font-size: 18px;
+    text-decoration: underline black;
+    color: #0086c8;
+
+}
+
+body.night .ok {
+    color: #0086c8;
+    text-decoration: underline #193273;
+}
+
+body.night .ok1 {
+    color: #0000EE;
+}
+
+body.night .ok1 a {
+    color: #0000EE;
+}
+
+body.night .ok1 a:hover {
+    color: cyan;
+}
+
+.ok1 {
+    font-size: 18px;
+}
+
+.ok1 a:hover {
+    color: cyan;
+}
+
+.logom:hover {
+    box-shadow: 8px 8px 8px black;
+}
+
+.contactme {
+    display: flex;
+
+}
+
+.ok1 {
+    display: flex;
+    overflow: hidden;
+}
+
+.ok:first-of-type,
+.ok1:first-of-type {
+    animation: showup 2s;
+    animation-fill-mode: forwards;
+}
+
+.ok:last-of-type,
+.ok1:last-of-type {
+    width: 0px;
+    animation: reveal 2s;
+    animation-fill-mode: forwards;
+}
+
+.ok:last-of-type span,
+.ok1:last-of-type span {
+    animation: slidein 2s cubic-bezier(0.70, 1.30, 0.90, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes showup {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        margin-left: -800px;
+    }
+
+    75% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 10px;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+
+    30% {
+        opacity: 0.6;
+        width: 290px;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+        width: 310px;
+    }
+}
+
 /* 
 +----------------------------------------------------------------------+
 | About
 +----------------------------------------------------------------------+
 */
-.M-Text-A{
+.M-Text-A {
     position: absolute;
     top: 10%;
     right: 6%;
@@ -195,59 +427,245 @@ section {
     height: 474px;
 }
 
-.M-Text-A:hover{
+.M-Text-A:hover {
 
     cursor: grabbing;
 }
-.A-icone{
+
+.A-icone {
     width: 22px;
     margin-left: 8px;
 }
-.first-list{
+
+.first-list {
     display: flex;
 }
-.M-Pres strong{
+
+.M-Pres strong {
     color: #193273;
     text-decoration: underline;
 }
-.M-Pres li{
+
+.M-Pres li {
     list-style-type: square;
 }
-.M-Pres ul li{
+
+.M-Pres ul li {
     list-style: inside;
-    list-style-type:simp-chinese-formal ;
+    list-style-type: simp-chinese-formal;
     color: #0086c8;
 }
-.M-Pres ul li i{
+
+.M-Pres ul li i {
     color: black;
 }
-body.night .M-Pres{
-    opacity: 0.8;
-}
-body.night .M-Pres ul li i{
-    color:#0086c8;
+
+
+
+body.night .M-Pres ul li i {
+    color: #0086c8;
 
 }
-body.night .M-Pres ul li{
+
+body.night .M-Pres p {
+    color: #0086c8;
+}
+
+body.night .M-Pres ul li {
     color: cyan;
     opacity: 100%;
 
 }
-body.night .M-Pres strong{
-    color: #193273;
+
+body.night .M-Pres strong {
+    color: cyan;
     opacity: 100%;
 }
-/* 
-+----------------------------------------------------------------------+
-| XP
-+----------------------------------------------------------------------+
-*/
 
 /* 
 +----------------------------------------------------------------------+
 | Skills
 +----------------------------------------------------------------------+
 */
+.M-TextS{
+    overflow-y: scroll;
+    position: absolute;
+    top: 8%;
+    right: 6%;
+    width: 500px;
+    height: 550px;
+}
+.transi-2{
+    opacity: 1;
+    margin-top: 500px;
+}
+.helps{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    
+}
+.helps1, .helps2{
+    color: #0000EE;
+    font-size: 30px;
+}
+.helps1:hover, .helps2:hover{
+    color: cyan;
+}
+
+.choix{
+    display: flex;
+    justify-content: space-between;
+}
+.choix1{
+    display: flex;
+    justify-content: space-between;
+}
+.edu{
+    position: absolute;
+    opacity: 1;
+}
+.exp{
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.comp{
+    position: absolute;
+    opacity: 1;
+}
+.comp1{
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.semititre1{
+    font-size: 30px;
+    color:#0086c8;
+    text-decoration: underline black;
+
+}
+.semititre2{
+    font-size: 30px;
+    color:#0086c8;
+    text-decoration: underline black;
+}
+.semititre3{
+    font-size: 30px;
+    color:#0086c8;
+    text-decoration: underline black;
+
+}
+.semititre4{
+    font-size: 30px;
+    color:#0086c8;
+    text-decoration: underline black;
+}
+.active{
+    color: cyan;
+}
+
+.semititre1:hover,
+.semititre2:hover{
+    color: cyan;
+}
+.semititre1::before,
+.semititre2::before{
+    content:"> ";
+    color: black;
+}
+.semititre3:hover,
+.semititre4:hover{
+    color: cyan;
+}
+.semititre3::before,
+.semititre4::before{
+    content:"> ";
+    color: black;
+}
+body.night .semititre1::before, .semititre2::before{
+    color: #193273;
+}
+body.night .semititre3::before, .semititre4::before{
+    color: #193273;
+}
+body.night .semititre1, .semititre2{
+    text-decoration: underline #193273;
+}
+body.night .semititre3, .semititre4{
+    text-decoration: underline #193273;
+}
+body.night .li-s .p2{
+    color: #0086c8;
+    opacity: 0.8;
+}
+body.night .rond{
+    background-color: cyan;
+}
+body.night .ul-s::before {
+    background-color: cyan;
+}
+.ul-s {
+    margin-top: 20px;
+    list-style-type: none;
+    position: relative;
+    padding: 0;
+    width: 20vw;
+}
+.li-s {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 25px;
+}
+.li-s .p1 {
+    margin-left: 25px;
+    background-color: #193273;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+}
+.li-s .p2 {
+    margin-left: 25px;
+    font-style: italic;
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+}
+.li-s .p2 a:hover{
+    color: cyan;
+}
+
+.li-s .rond {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #0086c8;
+}
+
+.li-s .Title {
+    color: #0086c8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-s::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 6px;
+    height: 100%;
+    width: 1px;
+    background-color: #193273;
+    opacity: 0.5;
+}
+
 /* 
 +----------------------------------------------------------------------+
 | Pour les sélections
@@ -257,6 +675,7 @@ body.night .M-Pres strong{
     color: blue;
     background-color: cyan;
 }
+
 ::selection {
     color: blue;
     background-color: cyan;
@@ -284,7 +703,8 @@ body.night .M-Pres strong{
     top: 0;
     width: 50%;
     height: 50%;
-    background: linear-gradient(8deg , black,#193273,black,#193273,black);}
+    background: linear-gradient(8deg, black, #193273, black, #193273, black);
+}
 
 .tright {
     position: absolute;
@@ -292,7 +712,8 @@ body.night .M-Pres strong{
     top: 0;
     width: 50%;
     height: 50%;
-    background: linear-gradient(-8deg , black,#193273,black,#193273,black);}
+    background: linear-gradient(-8deg, black, #193273, black, #193273, black);
+}
 
 .bleft {
     position: absolute;
@@ -300,7 +721,7 @@ body.night .M-Pres strong{
     bottom: 0;
     width: 50%;
     height: 50%;
-    background: linear-gradient(-8deg , black,#193273,black,#193273,black);
+    background: linear-gradient(-8deg, black, #193273, black, #193273, black);
 }
 
 .bright {
@@ -309,8 +730,9 @@ body.night .M-Pres strong{
     bottom: 0;
     width: 50%;
     height: 50%;
-    background: linear-gradient(8deg , black,#193273,black,#193273,black);
+    background: linear-gradient(8deg, black, #193273, black, #193273, black);
 }
+
 /* 
 +----------------------------------------------------------------------+
 | Black mode
@@ -327,14 +749,15 @@ body.night .M-Pres strong{
     border-radius: 24px;
     cursor: pointer;
 }
+
 .button:hover {
     background-color: #193273;
     transition: all 0.4s ease;
 }
 
 .icon {
-    transition: all 0.4s ease; 
-    background: #0086c8; 
+    transition: all 0.4s ease;
+    background: #0086c8;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -353,7 +776,12 @@ body.night .M-Pres strong{
     left: 46px;
     transition: all 0.8s ease;
 }
-
+.lien-s{
+    color: blue;
+}
+.lien-s:hover{
+    color: cyan;
+}
 .emoji-overlay {
     background: azure;
     mix-blend-mode: color;
@@ -363,111 +791,134 @@ body.night .M-Pres strong{
     left: 0;
     right: 0;
 }
+
 .emoji-change {
     background: transparent;
     transition: all 0.8s ease;
 }
+
 body.night {
     background: black;
 }
 
-body.night .M-Title{
-    color:#0086c8;
-}
-body.night .M-Pres{
-    color:#0086c8;
+body.night .M-Title {
+    color: cyan;
 }
 
-body.night .logob{
+body.night .M-Presp {
+    color: #0086c8;
+    opacity: 1;
+}
+
+body.night .logob {
     opacity: 100%;
 }
-body.night .logo{
+
+body.night .logo {
     opacity: 0;
 }
-body.night .M-right{
+
+body.night .M-right {
     color: #193273;
     border-right: solid 1px #193273;
 }
-body.night .M-left{
+
+body.night .M-left {
     color: #193273;
     border-left: solid 1px #193273;
 }
-body.night .Link a{
+
+body.night .Link a {
     color: #0086c8;
     border-bottom: 1px solid #193273;
 }
-body.night .Link a:hover{
+
+body.night .Link a:hover {
     color: cyan;
     border-bottom: 1px solid cyan;
 }
-body.night .Link img{
+
+body.night .Link img {
     background-color: #193273;
     border-radius: 50%;
 }
+
 body.night .button {
     background: #0086c8;
 }
+
 body.night .button:hover {
     background-color: #193273;
 }
+
 body.night .icon {
-    background: black; 
+    background: black;
 }
 
+/* 
++----------------------------------------------------------------------+
+| Portfolio
++----------------------------------------------------------------------+
+*/
+.portfolio{
+    color:blue;
+
+}
+.portfolio:hover{
+    color: cyan;
+
+}
 /* 
 +----------------------------------------------------------------------+
 | Responsive
 +----------------------------------------------------------------------+
 */
-
+.recursivep{
+    font-size: 20px;
+    opacity: 0;
+    color: blue;
+}
 @media (max-width: 768px) {
-    .row {
-        flex-direction: column;
+    body{
+        background-color: black;
     }
-
-    .M-Text {
-        width: unset;
+    .recursivep{
+        opacity: 1;
+        color: #0029ff;
     }
-
-    .M-Title {
-        font-size: 2rem;
-        margin-left: 30px;
+    .Container{
+        background-image: url('../images/Lion.png');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
-
-    .M-Pres {
-        font-size: 1rem;
-        margin-left: 30px;
+    .row{
+        opacity: 0;
     }
-
-    .Link {
-        top: 10%;
-    }
-    .M-TitleHelp{
-        animation:wow;
-        animation-fill-mode: forwards;
+    .TransitionContainer{
+        opacity: 0;
     }
     
-    @keyframes wow {
-        0%{
-            top:100%;
+}
+@media (orientation:landscape) and (max-width: 850px) {
+    body{
+        background-color: rgb(13, 6, 140);
+    }
+    .Container{
+        background-image: url('../images/Sung.gif');
+        background-position: center;
+        background-size: 65%;
+        background-repeat: no-repeat;
+    }
+    .row{
+        opacity: 0;
+    }
+    .recursivep{
+        opacity: 1;
+        color: cyan;
+    }
+    .TransitionContainer{
+        opacity: 0;
+    }
     
-        }
-        100%{
-            top: 70%;
-        
-        }
-    }
-
-    .logo {
-        position: absolute;
-        opacity: 0.5;
-        height: 200px;
-        margin-top: 150px;
-    }
-    body.night .logob{
-        position: absolute;
-        opacity: 0.5;
-        height: 200px;
-        margin-top: 150px;
-    }
 }

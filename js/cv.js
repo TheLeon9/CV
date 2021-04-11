@@ -1,9 +1,54 @@
+/* 
++----------------------------------------------------------------------+
+| Animation pour le kursor
++----------------------------------------------------------------------+
+*/
 new kursor({
     type: 1,
     color: 'rgba(0,134,200)',
     removeDefaultCursor: true
 });
 
+/* 
++----------------------------------------------------------------------+
+| Animation pour les skills
++----------------------------------------------------------------------+
+*/
+function edu(){
+    document.getElementById("exp").style.opacity = "0%"
+    document.getElementById("edu").style.opacity = "100%" 
+}
+function exp(){
+    document.getElementById("exp").style.opacity = "100%"
+    document.getElementById("edu").style.opacity = "0%"
+}
+function comp(){
+    document.getElementById("comp1").style.opacity = "0%"
+    document.getElementById("comp").style.opacity = "100%" 
+}
+function comp1(){
+    document.getElementById("comp1").style.opacity = "100%"
+    document.getElementById("comp").style.opacity = "0%"
+}
+function active(non){
+    if(non == 1){
+        edu()
+        comp()
+    }else{
+        exp()
+        comp1()
+    }
+    const ok = document.querySelector(".semititre1")
+    const ok1 = document.querySelector(".semititre2")
+    const ok2 = document.querySelector(".semititre3")
+    const ok3 = document.querySelector(".semititre4")
+
+    ok.classList.toggle("active")
+    ok1.classList.toggle("active")
+    ok2.classList.toggle("active")
+    ok3.classList.toggle("active")
+
+}
 /* 
 +----------------------------------------------------------------------+
 | Animation pour la transition
@@ -112,10 +157,7 @@ emoji.addEventListener("click", () => {
 });
 
 navSlide();
-/* 
-+----------------------------------------------------------------------+
-| Animation pour la souris qui bouge
-+----------------------------------------------------------------------+
-*/
+
+
 
 
