@@ -504,6 +504,7 @@ body.night .M-Pres strong {
     display: flex;
     flex-direction: column;
     top: 40%;
+    left: -5%;
     
 }
 .helps1, .helps2{
