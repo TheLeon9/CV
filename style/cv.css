@@ -421,7 +421,6 @@ body.night .ok1 a:hover {
 */
 .M-Text-A {
     position: absolute;
-    top: 10%;
     right: 6%;
     width: 440px;
     height: 474px;
@@ -497,7 +496,7 @@ body.night .M-Pres strong {
 }
 .transi-2{
     opacity: 1;
-    margin-top: 500px;
+    margin-top: 700px;
 }
 .helps{
     position: absolute;
