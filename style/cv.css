@@ -749,8 +749,24 @@ body.night .ul-s::before {
     border-radius: 24px;
     cursor: pointer;
 }
+.button1 {
+    position: absolute;
+    top: 2%;
+    left: 80%;
+    margin: 10px auto;
+    width: 80px;
+    height: 36px;
+    text-align: center;
+    background: black;
+    border-radius: 24px;
+    cursor: pointer;
+}
 
 .button:hover {
+    background-color: #193273;
+    transition: all 0.4s ease;
+}
+.button1:hover {
     background-color: #193273;
     transition: all 0.4s ease;
 }
@@ -850,6 +866,13 @@ body.night .button {
 body.night .button:hover {
     background-color: #193273;
 }
+body.night .button1 {
+    background: #0086c8;
+}
+
+body.night .button1:hover {
+    background-color: #193273;
+}
 
 body.night .icon {
     background: black;
@@ -868,6 +891,210 @@ body.night .icon {
     color: cyan;
 
 }
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.Containerp {
+    width: 100%;
+    height: 100%;
+}
+
+.rowp{
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    text-align: center;
+    border-left: 1px solid #0086c8;
+    border-right: 1px solid #0086c8;
+    overflow-y: scroll;
+}
+.rowp a{
+    font-size: 20px;
+    color: blue;
+    text-decoration: blue underline;
+
+}
+.rowp h3{
+    font-size: 30px;
+    color: #0086c8;
+    text-decoration: underline black;
+
+}
+.rowp p{
+    margin-left: 140px;
+    margin-right: 140px;
+    font-size: 18px;
+    opacity: 0.8;
+}
+body.night .rowp h3{
+    text-decoration: underline #193273;
+}
+body.night .rowp p{
+    color: #0086c8;
+}
+.rowp a:hover{
+    margin: 2px auto;
+    color: cyan;
+    text-decoration: cyan underline;
+
+}
+
+.slider{
+    width: 900px;
+    overflow: hidden;
+    margin: 10px auto;
+    border: 1px solid #0086c8;
+}
+.slide{
+    float: left;
+}
+
+.slides3{
+    width: calc(500px * 3);
+    animation: glisse3 15s infinite;
+    display: flex;
+    margin: 1px;
+
+}
+.slides4{
+    width: calc(500px * 4);
+    animation: glisse4 15s infinite;
+    display: flex;
+    margin: 1px;
+    
+
+}
+.slides{
+    width: calc(500px * 5);
+    animation: glisse 15s infinite;
+    display: flex;
+    margin: 1px;
+}
+.slide img{
+    width: 900px;
+    height: 500px;
+}
+@keyframes glisse{
+    0%{
+        transform: translateX(0);
+        
+    }
+    10%{
+        transform: translateX(0);
+        
+    }
+    20%{
+        transform: translateX(-900px);
+        
+    }
+    30%{
+        transform: translateX(-900px);
+        
+    }
+    40%{
+        transform: translateX(-1800px);
+        
+    }
+    50%{
+        transform: translateX(-1800px);
+        
+    }
+    60%{
+        transform: translateX(-2700px);
+        
+    }
+    70%{
+        transform: translateX(-2700px);
+        
+    }
+    80%{
+        transform: translateX(-3600px);
+        
+    }
+    90%{
+        transform: translateX(-3600px);
+        
+    }
+    100%{
+        transform: translateX(0px);
+        
+    }
+
+}
+@keyframes glisse3{
+    0%{
+        transform: translateX(0);
+        
+    }
+    10%{
+        transform: translateX(0);
+        
+    }
+    33%{
+        transform: translateX(-900px);
+        
+    }
+    43%{
+        transform: translateX(-900px);
+        
+    }
+    66%{
+        transform: translateX(-1800px);
+        
+    }
+    76%{
+        transform: translateX(-1800px);
+        
+    }
+    100%{
+        transform: translateX(0px);
+        
+    }
+
+}
+@keyframes glisse4{
+    0%{
+        transform: translateX(0);
+        
+    }
+    10%{
+        transform: translateX(0);
+        
+    }
+    25%{
+        transform: translateX(-900px);
+        
+    }
+    35%{
+        transform: translateX(-900px);
+        
+    }
+    50%{
+        transform: translateX(-1800px);
+        
+    }
+    60%{
+        transform: translateX(-1800px);
+        
+    }
+    75%{
+        transform: translateX(-2700px);
+        
+    }
+    85%{
+        transform: translateX(-2700px);
+        
+    }  
+    100%{
+        transform: translateX(0px);
+        
+    }
+
+}
 /* 
 +----------------------------------------------------------------------+
 | Responsive
@@ -877,6 +1104,7 @@ body.night .icon {
     font-size: 20px;
     opacity: 0;
     color: blue;
+    position: absolute;
 }
 @media (max-width: 768px) {
     body{
@@ -892,7 +1120,16 @@ body.night .icon {
         background-size: 100%;
         background-repeat: no-repeat;
     }
+    .Containerp{
+        background-image: url('../images/Lion.png');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
     .row{
+        opacity: 0;
+    }
+    .rowp{
         opacity: 0;
     }
     .TransitionContainer{
@@ -910,7 +1147,16 @@ body.night .icon {
         background-size: 65%;
         background-repeat: no-repeat;
     }
+    .Containerp{
+        background-image: url('../images/Sung.gif');
+        background-position: center;
+        background-size: 65%;
+        background-repeat: no-repeat;
+    }
     .row{
+        opacity: 0;
+    }
+    .rowp{
         opacity: 0;
     }
     .recursivep{
