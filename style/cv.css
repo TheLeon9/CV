@@ -1,13 +1,14 @@
 body,
 html {
     overflow-x: hidden;
-}
 
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: unset;
     font-family: 'Black Ops One', cursive;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -509,6 +510,7 @@ body.night .M-Pres strong {
 .helps1, .helps2{
     color: #0000EE;
     font-size: 30px;
+
 }
 .helps1:hover, .helps2:hover{
     color: cyan;
@@ -911,6 +913,7 @@ section {
     border-left: 1px solid #0086c8;
     border-right: 1px solid #0086c8;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 .rowp a{
     font-size: 20px;

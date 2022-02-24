@@ -15,32 +15,37 @@ new kursor({
 +----------------------------------------------------------------------+
 */
 AOS.init();
+
 /* 
 +----------------------------------------------------------------------+
 | Animation pour les skills
 +----------------------------------------------------------------------+
 */
-function edu(){
+function edu() {
     document.getElementById("exp").style.opacity = "0%"
-    document.getElementById("edu").style.opacity = "100%" 
+    document.getElementById("edu").style.opacity = "100%"
 }
-function exp(){
+
+function exp() {
     document.getElementById("exp").style.opacity = "100%"
     document.getElementById("edu").style.opacity = "0%"
 }
-function comp(){
+
+function comp() {
     document.getElementById("comp1").style.opacity = "0%"
-    document.getElementById("comp").style.opacity = "100%" 
+    document.getElementById("comp").style.opacity = "100%"
 }
-function comp1(){
+
+function comp1() {
     document.getElementById("comp1").style.opacity = "100%"
     document.getElementById("comp").style.opacity = "0%"
 }
-function active(non){
-    if(non == 1){
+
+function active(non) {
+    if (non == 1) {
         edu()
         comp()
-    }else{
+    } else {
         exp()
         comp1()
     }
@@ -62,13 +67,14 @@ function active(non){
 */
 var dur = 0.7;
 var delay = 0.2;
+
 function AnimationTest(href) {
     gsap.to(".tleft", {
         left: "0",
         top: "0",
         rotate: "0deg",
         duration: dur,
-        
+
         ease: [0.68, -0.6, 0.32, 1.6]
     });
     gsap.to(".tright", {
@@ -76,7 +82,7 @@ function AnimationTest(href) {
         top: "0",
         rotate: "0deg",
         duration: dur,
-        
+
         ease: [0.68, -0.6, 0.32, 1.6]
     });
     gsap.to(".bleft", {
@@ -84,7 +90,7 @@ function AnimationTest(href) {
         bottom: "0",
         rotate: "0deg",
         duration: dur,
-        
+
         ease: [0.68, -0.6, 0.32, 1.6]
     });
     gsap.to(".bright", {
@@ -140,7 +146,7 @@ var emoji = document.querySelector(".emoji-overlay");
 var icon = document.querySelector(".icon");
 var body = document.querySelector("body");
 
-if (localStorage.getItem("night")=== "dark") {
+if (localStorage.getItem("night") === "dark") {
 
     icon.classList.toggle("icon-change");
     emoji.classList.toggle("emoji-change");
@@ -153,7 +159,7 @@ emoji.addEventListener("click", () => {
     emoji.classList.toggle("emoji-change");
     body.classList.toggle("night");
 
-    if (localStorage.getItem("night") === "dark" ) {
+    if (localStorage.getItem("night") === "dark") {
         localStorage.setItem("night", "white")
 
     } else {
@@ -163,7 +169,3 @@ emoji.addEventListener("click", () => {
 });
 
 navSlide();
-
-
-
-
